@@ -8,7 +8,7 @@
 - license : MIT
 ---
 插件界面：
-![image](github.com/QinSheng-Li/qsbundle/blob/master/images/screenshot.jpg)
+![img](https://raw.githubusercontent.com/QinSheng-Li/qsbundle/master/images/screenshot.jpg)
 ---
 ### 需要注意的是设置为bundle包后其子目录会自动取消为bundle设置,因为目前是不支持bundle包嵌套的如果父目录与子孙目录同时设置为bundle包则构建会失败
 
@@ -18,5 +18,5 @@
 
 ### 如果觉得有用的话,也可以支持一波:pray:
 
-![image](github.com/QinSheng-Li/qsbundle/blob/master/images/alipay.jpg)
-![image](github.com/QinSheng-Li/qsbundle/blob/master/images/wechatpay.jpg)
+![img](https://raw.githubusercontent.com/QinSheng-Li/qsbundle/master/images/alipay.jpg)
+![img](https://raw.githubusercontent.com/QinSheng-Li/qsbundle/master/images/wechatpay.jpg)
