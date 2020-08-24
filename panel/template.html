@@ -1,0 +1,59 @@
+<link rel="stylesheet"
+    href="app://node_modules/font-awesome/css/font-awesome.min.css">
+<div id='toolBar' class='layout horizontal center'>
+    <ui-button id='btn-refresh' @click='_onRefreshClick'>
+        <i class="fa fa-rotate-right"></i>
+    </ui-button>
+    <!-- <ui-button @click="_onAutoClick">{{autoConfig}}</ui-button> -->
+    <ui-input id='search-box' placeholder='Search...' v-value='searchValue'></ui-input>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th style="width: 30%;">{{dicName}}</th>
+            <th style="width: 15%;">{{stateName}}</th>
+            <th style="width: 30%;">{{configName}}</th>
+            <th style="width: 10%;">{{priorityName}}</th>
+            <th style="width: 15%">{{otherName}}</th>
+        </tr>
+    </thead>
+</table>
+<div class="view" style="overflow:scroll;height:100%">
+    <table>
+        <tbody>
+            <tr v-for='item in filter(infoList, searchValue)'>
+                <td class="key" style="width: 30%;">{{item.key}}</td>
+                <td style="width: 15%;">
+                    <ui-checkbox checked={{item.value.isBundle}}
+                        v-on:change="_switchOption($event, item.value)"></ui-checkbox>
+                </td>
+                <td class="value" style="width: 30%;">
+                    <ui-input class="small"
+                        v-bind:value="item.value.bundleName"
+                        v-if="item.value.isBundle"></ui-input>
+                </td>
+                <td class="value" style="width: 10%;">
+                    <ui-select v-if="item.value.isBundle"
+                        v-bind:value="item.value.priority"
+                        size="medium"
+                        v-on:confirm="_switchPriority($event, item.value)">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </ui-select>
+                </td>
+                <td class="value" style="width: 15%;">
+                    <ui-button style="width:80px;" v-if="item.value.isBundle"
+                        @click="_selectBundle($event, item.value)">{{gotoName}}</ui-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

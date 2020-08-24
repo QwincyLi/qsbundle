@@ -1,0 +1,22 @@
+{
+  "name": "qsbundle",
+  "version": "1.0.0",
+  "description": "qsbundle",
+  "author": "lqs",
+  "main": "main.js",
+  "main-menu": {
+    "i18n:MAIN_MENU.package.title/qsbundle": {
+      "message": "qsbundle:open",
+      "accelerator": "s"
+    }
+  },
+  "panel": {
+    "main": "panel/index.js",
+    "type": "dockable",
+    "title": "qsbundle",
+    "height": 500,
+    "min-height": 500,
+    "width": 640,
+    "min-width": 480
+  }
+}
