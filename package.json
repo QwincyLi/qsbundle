@@ -6,8 +6,7 @@
   "main": "main.js",
   "main-menu": {
     "i18n:MAIN_MENU.package.title/qsbundle": {
-      "message": "qsbundle:open",
-      "accelerator": "s"
+      "message": "qsbundle:open"
     }
   },
   "panel": {
