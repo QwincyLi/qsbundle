@@ -61,15 +61,6 @@ function createVue(elem) {
 
             _onAutoClick(event) {
                 event.stopPropagation()
-
-                let leafDic = {}
-                //判断是否含有子目录 有子目录的不配置(bundle嵌套配置构建会失败)
-                for (let i = 0; i < this.infoList.length; i++) {
-                    let url = this.infoList[i].key
-                    if (leafDic[url]) {
-
-                    }
-                }
             },
 
             _switchOption(event, bundle) {
@@ -86,7 +77,15 @@ function createVue(elem) {
             },
 
             _selectBundle(event, bundle) {
+                Editor.log(event)
+                Editor.log(bundle.uuid)
                 Editor.Selection.select("asset", bundle.uuid)
+            },
+
+            _setName(event, bundle) {
+                let name = event.target.value
+                bundle.bundleName = name
+                this._modify(bundle)
             },
 
             _modify(bundle) {

@@ -6,4 +6,5 @@ module.exports = {
     priority: "优先级",
     detail: "详细设置",
     goto: "前往设置",
+    autoConfig: "一键配置",
 };

@@ -30,7 +30,8 @@
                 <td class="value" style="width: 30%;">
                     <ui-input class="small"
                         v-bind:value="item.value.bundleName"
-                        v-if="item.value.isBundle"></ui-input>
+                        v-if="item.value.isBundle"
+                        v-on:confirm="_setName($event, item.value)"></ui-input>
                 </td>
                 <td class="value" style="width: 10%;">
                     <ui-select v-if="item.value.isBundle"

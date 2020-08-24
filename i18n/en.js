@@ -6,4 +6,5 @@ module.exports = {
     priority: "Priority",
     detail: "Detail",
     goto: "Jump",
+    autoConfig: "Quickly Setting",
 };
