@@ -10,8 +10,8 @@
 插件界面：
 ![img](https://raw.githubusercontent.com/QinSheng-Li/qsbundle/master/images/screenshot.jpg)
 ---
-- bundle包后其子目录会自动取消为bundle设置,因为目前是不支持bundle包嵌套的如果父目录与子孙目录同时设置为bundle包则构建会失败
-- resources目录是引擎默认配置,不能修改,也不显示在列表中
+- 设置为bundle包后其子目录会自动取消bundle设置,因为目前是不支持bundle包嵌套的如果父目录与子孙目录同时设置为bundle包则构建会失败
+- resources目录是引擎默认配置的资源配置包,不能修改,也不显示在列表中
 
 ---
    
