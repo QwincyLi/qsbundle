@@ -86,8 +86,6 @@ function createVue(elem) {
             },
 
             _selectBundle(event, bundle) {
-                Editor.log(event)
-                Editor.log(bundle.uuid)
                 Editor.Selection.select("asset", bundle.uuid)
             },
 
