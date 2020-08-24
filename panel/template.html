@@ -7,17 +7,19 @@
     <!-- <ui-button @click="_onAutoClick">{{autoConfig}}</ui-button> -->
     <ui-input id='search-box' placeholder='Search...' v-value='searchValue'></ui-input>
 </div>
-<table>
-    <thead>
-        <tr>
-            <th style="width: 30%;">{{dicName}}</th>
-            <th style="width: 15%;">{{stateName}}</th>
-            <th style="width: 30%;">{{configName}}</th>
-            <th style="width: 10%;">{{priorityName}}</th>
-            <th style="width: 15%">{{otherName}}</th>
-        </tr>
-    </thead>
-</table>
+<div class="view">
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 30%;">{{dicName}}</th>
+                <th style="width: 15%;">{{stateName}}</th>
+                <th style="width: 30%;">{{configName}}</th>
+                <th style="width: 10%;">{{priorityName}}</th>
+                <th style="width: 15%">{{otherName}}</th>
+            </tr>
+        </thead>
+    </table>
+</div>
 <div class="view" style="overflow:scroll;height:100%">
     <table>
         <tbody>
@@ -58,3 +60,7 @@
         </tbody>
     </table>
 </div>
+<!-- <div style="height: 30px; width: 100%;" class="flex-1">
+    <ui-label>source code:</ui-label>
+    <a href="https://github.com/QinSheng-Li/qsbundle">https://github.com/QinSheng-Li/qsbundle</a>
+</div> -->

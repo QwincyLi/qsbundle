@@ -18,8 +18,12 @@ module.exports = {
         var url = Editor.assetdb._url(p);
         var fspath = Editor.assetdb.urlToFspath(url)
         let rootUrl = "db://assets/"
+
         if (url.indexOf(rootUrl) >= 0 && url != rootUrl) {
-          results.push({ url: url, uuid: Editor.assetdb._path2uuid[p], path: fspath });
+          //排除resources目录
+          let resourcesUrl = rootUrl + "resources"
+          if (url.indexOf(resourcesUrl) < 0)
+            results.push({ url: url, uuid: Editor.assetdb._path2uuid[p], path: fspath });
         }
       }
       results.sort(function (a, b) {
